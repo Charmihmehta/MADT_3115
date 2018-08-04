@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="camera_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xk6-Ca-dDb">
+                                <rect key="frame" x="60" y="105" width="267" height="207"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cF-QS-LRP">
+                                <rect key="frame" x="68" y="382" width="237" height="30"/>
+                                <state key="normal" title="Take picture"/>
+                                <connections>
+                                    <action selector="shootPictureOrVideoWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="to0-nd-REz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bW-o7-loj">
+                                <rect key="frame" x="29" y="446" width="316" height="30"/>
+                                <state key="normal" title="Pick From library"/>
+                                <connections>
+                                    <action selector="selectExistingPictureOrVideoWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RNa-vi-FdW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6cF-QS-LRP" secondAttribute="trailing" constant="70" id="5xK-s2-lMe"/>
+                            <constraint firstItem="8bW-o7-loj" firstAttribute="top" secondItem="6cF-QS-LRP" secondAttribute="bottom" constant="34" id="6tw-2I-Cv1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8bW-o7-loj" secondAttribute="trailing" constant="30" id="9cx-oS-gNl"/>
+                            <constraint firstItem="Xk6-Ca-dDb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="CXt-rO-rQE"/>
+                            <constraint firstItem="6cF-QS-LRP" firstAttribute="top" secondItem="Xk6-Ca-dDb" secondAttribute="bottom" constant="70" id="E7a-Q4-vrb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xk6-Ca-dDb" secondAttribute="bottom" constant="355" id="LR3-gi-46f"/>
+                            <constraint firstItem="6cF-QS-LRP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="MEt-7c-1Ir"/>
+                            <constraint firstItem="8bW-o7-loj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="N0n-D8-drn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8bW-o7-loj" secondAttribute="bottom" constant="191" id="gdW-mI-oFw"/>
+                            <constraint firstItem="8bW-o7-loj" firstAttribute="top" secondItem="6cF-QS-LRP" secondAttribute="bottom" constant="34" id="jej-hg-iUE"/>
+                            <constraint firstItem="Xk6-Ca-dDb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="vx3-a0-Sf6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xk6-Ca-dDb" secondAttribute="trailing" constant="48" id="xeV-wy-Fg8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Xk6-Ca-dDb" id="jDS-N1-GDV"/>
+                        <outlet property="pickPictureButton" destination="8bW-o7-loj" id="Z3M-01-NmM"/>
+                        <outlet property="takePictureButton" destination="6cF-QS-LRP" id="qAi-2F-UBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
